@@ -152,3 +152,47 @@ function resetErrors() {
         message.style.display = 'none';
     });
 }
+
+document.getElementById('youth-id').addEventListener('blur', function () {
+    // Get the UUID value from the input field
+    var uuid = this.value.trim();
+
+    if (uuid) {
+        // Fetch data based on the UUID
+        fetch('fetch_data.php?uuid=' + encodeURIComponent(uuid))
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Populate the form fields with the fetched data
+                    document.getElementById('youth-name').value = data.data.youth_name || '';
+
+                    // Set the gender radio button
+                    let genderRadios = document.getElementsByName('youth-gender');
+                    genderRadios.forEach(radio => {
+                        if (radio.value === data.data.gender) {
+                            radio.checked = true;
+                        }
+                    });
+
+                    // Set the county radio button
+                    let countyRadios = document.getElementsByName('county');
+                    countyRadios.forEach(radio => {
+                        if (radio.value === data.data.county) {
+                            radio.checked = true;
+                        }
+                    });
+
+                } else {
+                    // Handle the case when no record is found
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while fetching the data.');
+            });
+    }
+});
+
+
+
