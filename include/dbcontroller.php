@@ -10,9 +10,9 @@ class DBController {
     function __construct() {
         if($_SERVER['SERVER_NAME']=="sheet.mplexy.com"||$_SERVER['SERVER_NAME']=="www.sheet.mplexy.com"){
             $this->host = "localhost";
-            $this->user = "uueglo3wjbgsv";
-            $this->password = "@1#5%2D12z2@";
-            $this->database = "db6fh6qwq31hbz";
+            $this->user = "umguo6pj7osym";
+            $this->password = "{@2q*1cj#m#k";
+            $this->database = "db5wrl5dafb4a5";
         }
 
         $this->conn = $this->connectDB();
