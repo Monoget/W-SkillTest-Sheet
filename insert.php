@@ -16,16 +16,17 @@ $callPurpose = $db_handle->checkValue($_POST['callPurpose']);
 $inserted_at=date('Y-m-d H:i:s');
 
 // Prepare SQL statement for insertion
-$sql = "INSERT INTO `sheet` (`ros_name`, `youth_id`, `confirm_uuid`, `youth_name`, `youth_gender`, `county`, `call_purpose`, `inserted_at`) 
-        VALUES ('$rosName', '$youthId', '$confirmUuid', '$youthName', '$youthGender', '$county', '$callPurpose', '$inserted_at')";
+$sql = "INSERT INTO `sheet` (`ros_name`, `youth_id`, `confirm_uuid`, `youth_name`, `youth_gender`, `county`, `call_purpose`, `inserted_at`) VALUES ('$rosName', '$youthId', '$confirmUuid', '$youthName', '$youthGender', '$county', '$callPurpose', '$inserted_at')";
 
 // Execute the SQL query
 $result = $db_handle->insertQuery($sql);
 
 // Return JSON response
+// Return JSON response
 if ($result) {
     echo json_encode(['success' => true]);
 } else {
-    echo json_encode(['success' => false]);
+    echo json_encode(['success' => false, 'message' => 'Failed to insert data.']);
 }
+
 ?>

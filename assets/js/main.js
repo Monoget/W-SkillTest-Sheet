@@ -7,7 +7,7 @@ document.getElementById('nextBtn-1').addEventListener('click', function () {
     var youthId = document.getElementById('youth-id').value;
     var confirmUuid = document.getElementById('confirm-uuid').value;
     var youthName = document.getElementById('youth-name').value;
-    var youthGender = document.querySelector('input[name="youth-gender"]:checked');
+    var youthGender = document.querySelector('input[name="youthGender"]:checked');
     var county = document.querySelector('input[name="county"]:checked');
 
     var isValid = true;
@@ -59,13 +59,13 @@ document.getElementById('submit').addEventListener('click', function () {
     resetErrors();
 
     // Capture form fields for Section 2
-    var callPurpose = document.querySelector('input[name="call-purpose"]:checked');
+    var callPurpose = document.querySelector('input[name="callPurpose"]:checked');
 
     var isValid = true;
 
     // Validate Call Purpose
     if (!callPurpose) {
-        document.querySelector('input[name="call-purpose"]').classList.add('is-invalid');
+        document.querySelector('input[name="callPurpose"]').classList.add('is-invalid');
         document.getElementById('call-purpose-error').style.display = 'block';
         isValid = false;
     }
@@ -77,9 +77,9 @@ document.getElementById('submit').addEventListener('click', function () {
             youthId: document.getElementById('youth-id').value,
             confirmUuid: document.getElementById('confirm-uuid').value,
             youthName: document.getElementById('youth-name').value,
-            youthGender: document.querySelector('input[name="youth-gender"]:checked').value,
+            youthGender: document.querySelector('input[name="youthGender"]:checked').value,
             county: document.querySelector('input[name="county"]:checked').value,
-            callPurpose: document.querySelector('input[name="call-purpose"]:checked').value
+            callPurpose: document.querySelector('input[name="callPurpose"]:checked').value
         };
 
         // Perform AJAX request
@@ -120,13 +120,10 @@ document.getElementById('clearBtn').addEventListener('click', function () {
     document.getElementById('youth-name').value = ''; // Clear Youth Name input
 
     // Uncheck all radio buttons
-    document.querySelectorAll('input[name="youth-gender"]').forEach(function (input) {
+    document.querySelectorAll('input[name="youthGender"]').forEach(function (input) {
         input.checked = false;
     });
     document.querySelectorAll('input[name="county"]').forEach(function (input) {
-        input.checked = false;
-    });
-    document.querySelectorAll('input[name="call-status"]').forEach(function (input) {
         input.checked = false;
     });
 });
@@ -167,7 +164,7 @@ document.getElementById('youth-id').addEventListener('blur', function () {
                     document.getElementById('youth-name').value = data.data.youth_name || '';
 
                     // Set the gender radio button
-                    let genderRadios = document.getElementsByName('youth-gender');
+                    let genderRadios = document.getElementsByName('youthGender');
                     genderRadios.forEach(radio => {
                         if (radio.value === data.data.gender) {
                             radio.checked = true;
