@@ -174,9 +174,6 @@ document.getElementById('youth-id').addEventListener('blur', function () {
                         }
                     });
 
-                } else {
-                    // Handle the case when no record is found
-                    alert(data.message);
                 }
             })
             .catch(error => {
