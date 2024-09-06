@@ -3,28 +3,32 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-   <title>Skill Up Bootcamp 7 Acquisition Outbound Script 2024</title>
+    <title>Skill Up Bootcamp 7 Acquisition Outbound Script 2024</title>
     <link href="assets/vendor/Bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="assets/vendor/FontAwesome/css/all.min.css" rel="stylesheet"/>
-	<link href="assets/vendor/Bootstrap/font/bootstrap-icons.min.css" rel="stylesheet"/>
-	<link href="assets/vendor/uikit/css/uikit.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/Bootstrap/font/bootstrap-icons.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/uikit/css/uikit.min.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="form-container">
+        <div class="col-lg-8 ">
+            <div class="card p-3 mt-3">
                 <!-- Form Header -->
                 <div class="form-header">
                     <h1>Skill Up Bootcamp 7 Acquisition Outbound Script 2024</h1>
                 </div>
+                <p class="text-danger">* Indicates required question</p>
+            </div>
 
-                <!-- Form Body -->
-                <form id="multiStepForm">
-                    <!-- Section 1 -->
-                    <div class="form-section active" id="section-1">
-                        <!-- ROs Name -->
+
+            <!-- Form Body -->
+            <form id="multiStepForm">
+                <!-- Section 1 -->
+                <div class="form-section active" id="section-1">
+                    <!-- ROs Name -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
                             <label for="ros-name" class="form-label">ROs Name <span class="text-danger">*</span></label>
                             <select class="form-select" id="ros-name" required>
@@ -37,27 +41,40 @@
                                 <option value="Tester">Tester</option>
                             </select>
                         </div>
+                    </div>
 
-                        <!-- Youth ID -->
+                    <!-- Youth ID -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label for="youth-id" class="form-label">01.a) Youth ID (uuid) <span class="text-danger">*</span></label><br/>
+                            <label for="youth-id" class="form-label">01.a) Youth ID (uuid) <span
+                                    class="text-danger">*</span></label><br/>
                             <small class="fw-bold">Use the phone number if the UUID is not assigned.</small>
-                            <input type="text" class="form-control" id="youth-id" placeholder="Use the phone number if UUID is not assigned" required>
+                            <input type="text" class="form-control" id="youth-id"
+                                   placeholder="Use the phone number if UUID is not assigned" required>
                         </div>
+                    </div>
 
-                        <!-- Confirm UUID -->
+                    <!-- Confirm UUID -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label for="confirm-uuid" class="form-label">01.a.1) Please confirm UUID <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="confirm-uuid" placeholder="Confirm UUID" required>
+                            <label for="confirm-uuid" class="form-label">01.a.1) Please confirm UUID <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="confirm-uuid" placeholder="Confirm UUID"
+                                   required>
                         </div>
+                    </div>
 
-                        <!-- Youth Name -->
+                    <!-- Youth Name -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
                             <label for="youth-name" class="form-label">01.b) Youth Name *</label>
-                            <input type="text" class="form-control" id="youth-name" placeholder="Enter youth name" required>
+                            <input type="text" class="form-control" id="youth-name" placeholder="Enter youth name"
+                                   required>
                         </div>
+                    </div>
 
-                        <!-- Youth Gender -->
+                    <!-- Youth Gender -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
                             <label class="form-label">01.c) Youth Gender *</label>
                             <div class="form-check">
@@ -73,8 +90,10 @@
                                 <label class="form-check-label">Other...</label>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- County -->
+                    <!-- County -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
                             <label class="form-label">01.d) County *</label>
                             <div class="form-check">
@@ -94,12 +113,15 @@
                                 <label class="form-check-label">Kwale</label>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Call Status -->
+                    <!-- Call Status -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
                             <label class="form-label">02. Call Status *</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="Reached" required>
+                                <input class="form-check-input" type="radio" name="call-status" value="Reached"
+                                       required>
                                 <label class="form-check-label">Reached</label>
                             </div>
                             <div class="form-check">
@@ -127,49 +149,76 @@
                                 <label class="form-check-label">Not in Service</label>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="form-footer text-end">
-                            <button type="button" class="btn btn-primary" id="nextBtn-1">Next</button>
+                    <!-- Section 1 -->
+                    <div class="form-footer d-flex justify-content-between align-items-center mb-3">
+                        <button type="button" class="btn btn-secondary" id="clearBtn">Clear Form</button>
+                        <button type="button" class="btn btn-primary" id="nextBtn-1">Next</button>
+                    </div>
+                </div>
+
+                <!-- Section 2 -->
+                <div class="form-section" id="section-2">
+                    <!-- Youth ID -->
+                    <div class="card p-3 mt-3">
+                        <div class="mb-3">
+                            <label for="purpose" class="form-label">Purpose of the Call <span
+                                    class="text-danger">*</span></label><br/>
+                            <textarea class="form-control" id="purpose" rows="4"></textarea>
                         </div>
                     </div>
 
-                    <!-- Section 2 -->
-                    <div class="form-section" id="section-2">
-                        <h5 class="form-section-title">Section 2 of 17: Purpose of the Call</h5>
-
-                        <!-- Purpose of the Call -->
+                    <!-- Purpose of the Call -->
+                    <div class="card p-3 mt-3">
                         <div class="mb-3">
                             <label class="form-label">03. What is the purpose of this call? *</label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose" value="A360 Awareness & Acquisition" required>
+                                <input class="form-check-input" type="radio" name="call-purpose"
+                                       value="A360 Awareness & Acquisition" required>
                                 <label class="form-check-label">A360 Awareness & Acquisition</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose" value="Online Acquisition (BC7 DB)">
+                                <input class="form-check-input" type="radio" name="call-purpose"
+                                       value="Online Acquisition (BC7 DB)">
                                 <label class="form-check-label">Online Acquisition (BC7 DB)</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose" value="Bootcamp 6 DB Youths">
+                                <input class="form-check-input" type="radio" name="call-purpose"
+                                       value="Bootcamp 6 DB Youths">
                                 <label class="form-check-label">Bootcamp 6 DB Youths</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose" value="Offline Acquisition">
+                                <input class="form-check-input" type="radio" name="call-purpose"
+                                       value="Offline Acquisition">
                                 <label class="form-check-label">Offline Acquisition</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose" value="Activation - Attendance Follow Up">
+                                <input class="form-check-input" type="radio" name="call-purpose"
+                                       value="Activation - Attendance Follow Up">
                                 <label class="form-check-label">Activation - Attendance Follow Up</label>
                             </div>
                         </div>
-
-                        <div class="form-footer text-end">
-                            <button type="button" class="btn btn-primary" id="nextBtn-2">Next</button>
-                        </div>
                     </div>
 
-                    <!-- Section 3 (Example of skipping and conditional rendering can be added) -->
-                </form>
-            </div>
+                    <!-- Section 1 -->
+                    <div class="form-footer d-flex justify-content-between align-items-center mb-3">
+                        <button type="button" class="btn btn-secondary" id="clearBtn-2">Clear Form</button>
+                        <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="form-section" id="section-3">
+                    <div class="card p-3 mt-3">
+                        <div class="mb-3 text-center">
+                            <h1>
+                                Thanks For Submitting the Form
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
