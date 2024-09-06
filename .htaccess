@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^input index.html [NC,L]
+
+RewriteRule ^view view_data.php [NC,L]
