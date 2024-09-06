@@ -71,7 +71,6 @@ document.getElementById('submit').addEventListener('click', function () {
     }
 
     if (isValid) {
-        // Collect data from both sections
         var formData = {
             rosName: document.getElementById('ros-name').value,
             youthId: document.getElementById('youth-id').value,
@@ -82,29 +81,25 @@ document.getElementById('submit').addEventListener('click', function () {
             callPurpose: document.querySelector('input[name="callPurpose"]:checked').value
         };
 
-        // Perform AJAX request
         fetch('insert.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify({ data: formData }) // Using 'data' as a key
         })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    // Form is valid and data is successfully inserted
                     alert('Form submitted successfully!');
                     document.getElementById('section-2').style.display = 'none';
                     document.getElementById('section-3').style.display = 'block';
                 } else {
-                    // Handle server-side validation or errors
                     alert('There was an issue with the submission.');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred while submitting the form.');
             });
     }
 });
