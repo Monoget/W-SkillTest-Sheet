@@ -3,15 +3,223 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Basic Bootstrap Frontend</title>
+   <title>Skill Up Bootcamp 7 Acquisition Outbound Script 2024</title>
     <link href="assets/vendor/Bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="assets/vendor/FontAwesome/css/all.min.css" rel="stylesheet"/>
 	<link href="assets/vendor/Bootstrap/font/bootstrap-icons.min.css" rel="stylesheet"/>
 	<link href="assets/vendor/uikit/css/uikit.min.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
+	<style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .form-header {
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+
+        .form-footer {
+            margin-top: 20px;
+        }
+
+        .form-section-title {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-<h1>Hello, world!</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="form-container">
+                <!-- Form Header -->
+                <div class="form-header">
+                    <h1>Skill Up Bootcamp 7 Acquisition Outbound Script 2024</h1>
+                </div>
+
+                <!-- Form Body -->
+                <form id="multiStepForm">
+                    <!-- Section 1 -->
+                    <div class="form-section active" id="section-1">
+                        <!-- ROs Name -->
+                        <div class="mb-3">
+                            <label for="ros-name" class="form-label">ROs Name <span class="text-danger">*</span></label>
+                            <select class="form-select" id="ros-name" required>
+                                <option selected disabled>Choose...</option>
+                                <option value="Agatha">Agatha</option>
+                                <option value="Josephine">Josephine</option>
+                                <option value="Lydia">Lydia</option>
+                                <option value="Shawn">Shawn</option>
+                                <option value="Tobias">Tobias</option>
+                                <option value="Tester">Tester</option>
+                            </select>
+                        </div>
+
+                        <!-- Youth ID -->
+                        <div class="mb-3">
+                            <label for="youth-id" class="form-label">01.a) Youth ID (uuid) <span class="text-danger">*</span></label><br/>
+                            <small class="fw-bold">Use the phone number if the UUID is not assigned.</small>
+                            <input type="text" class="form-control" id="youth-id" placeholder="Use the phone number if UUID is not assigned" required>
+                        </div>
+
+                        <!-- Confirm UUID -->
+                        <div class="mb-3">
+                            <label for="confirm-uuid" class="form-label">01.a.1) Please confirm UUID <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="confirm-uuid" placeholder="Confirm UUID" required>
+                        </div>
+
+                        <!-- Youth Name -->
+                        <div class="mb-3">
+                            <label for="youth-name" class="form-label">01.b) Youth Name *</label>
+                            <input type="text" class="form-control" id="youth-name" placeholder="Enter youth name" required>
+                        </div>
+
+                        <!-- Youth Gender -->
+                        <div class="mb-3">
+                            <label class="form-label">01.c) Youth Gender *</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="youth-gender" value="Male" required>
+                                <label class="form-check-label">Male</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="youth-gender" value="Female">
+                                <label class="form-check-label">Female</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="youth-gender" value="Other">
+                                <label class="form-check-label">Other...</label>
+                            </div>
+                        </div>
+
+                        <!-- County -->
+                        <div class="mb-3">
+                            <label class="form-label">01.d) County *</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="county" value="Homabay" required>
+                                <label class="form-check-label">Homabay</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="county" value="Kakamega">
+                                <label class="form-check-label">Kakamega</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="county" value="Kitui">
+                                <label class="form-check-label">Kitui</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="county" value="Kwale">
+                                <label class="form-check-label">Kwale</label>
+                            </div>
+                        </div>
+
+                        <!-- Call Status -->
+                        <div class="mb-3">
+                            <label class="form-label">02. Call Status *</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-status" value="Reached" required>
+                                <label class="form-check-label">Reached</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-status" value="Call Back">
+                                <label class="form-check-label">Call Back</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-status" value="No answer">
+                                <label class="form-check-label">No answer</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-status" value="Phone Off">
+                                <label class="form-check-label">Phone Off</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-status" value="Hung Up">
+                                <label class="form-check-label">Hung Up</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-status" value="Wrong Number">
+                                <label class="form-check-label">Wrong Number</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-status" value="Not in Service">
+                                <label class="form-check-label">Not in Service</label>
+                            </div>
+                        </div>
+
+                        <div class="form-footer text-end">
+                            <button type="button" class="btn btn-primary" id="nextBtn-1">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="form-section" id="section-2">
+                        <h5 class="form-section-title">Section 2 of 17: Purpose of the Call</h5>
+
+                        <!-- Purpose of the Call -->
+                        <div class="mb-3">
+                            <label class="form-label">03. What is the purpose of this call? *</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="A360 Awareness & Acquisition" required>
+                                <label class="form-check-label">A360 Awareness & Acquisition</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Online Acquisition (BC7 DB)">
+                                <label class="form-check-label">Online Acquisition (BC7 DB)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Bootcamp 6 DB Youths">
+                                <label class="form-check-label">Bootcamp 6 DB Youths</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Offline Acquisition">
+                                <label class="form-check-label">Offline Acquisition</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Activation - Attendance Follow Up">
+                                <label class="form-check-label">Activation - Attendance Follow Up</label>
+                            </div>
+                        </div>
+
+                        <div class="form-footer text-end">
+                            <button type="button" class="btn btn-primary" id="nextBtn-2">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Section 3 (Example of skipping and conditional rendering can be added) -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('nextBtn-1').addEventListener('click', function () {
+        document.getElementById('section-1').classList.remove('active');
+        document.getElementById('section-2').classList.add('active');
+    });
+
+    document.getElementById('nextBtn-2').addEventListener('click', function () {
+        document.getElementById('section-2').classList.remove('active');
+        // Move to the next section accordingly
+    });
+</script>
 
 <script src="assets/vendor/Bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/jQuery/jquery-3.6.4.min.js"></script>
