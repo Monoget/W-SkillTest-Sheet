@@ -9,41 +9,6 @@
 	<link href="assets/vendor/Bootstrap/font/bootstrap-icons.min.css" rel="stylesheet"/>
 	<link href="assets/vendor/uikit/css/uikit.min.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
-	<style>
-        body {
-            background-color: #f8f9fa;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-        }
-
-        .form-header {
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .form-section {
-            display: none;
-        }
-
-        .form-section.active {
-            display: block;
-        }
-
-        .form-footer {
-            margin-top: 20px;
-        }
-
-        .form-section-title {
-            margin-bottom: 20px;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -208,18 +173,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    document.getElementById('nextBtn-1').addEventListener('click', function () {
-        document.getElementById('section-1').classList.remove('active');
-        document.getElementById('section-2').classList.add('active');
-    });
-
-    document.getElementById('nextBtn-2').addEventListener('click', function () {
-        document.getElementById('section-2').classList.remove('active');
-        // Move to the next section accordingly
-    });
-</script>
 
 <script src="assets/vendor/Bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/jQuery/jquery-3.6.4.min.js"></script>
