@@ -24,3 +24,15 @@ body {
 .form-section-title {
     margin-bottom: 20px;
 }
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875em;
+}
+
+input.is-invalid ~ .invalid-feedback,
+select.is-invalid ~ .invalid-feedback,
+textarea.is-invalid ~ .invalid-feedback {
+    display: block;
+}

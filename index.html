@@ -40,114 +40,79 @@
                                 <option value="Tobias">Tobias</option>
                                 <option value="Tester">Tester</option>
                             </select>
+                            <div class="invalid-feedback" id="ros-name-error"><i class="fa-solid fa-circle-info"></i> ROs Name is required.</div>
                         </div>
                     </div>
 
                     <!-- Youth ID -->
                     <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label for="youth-id" class="form-label">01.a) Youth ID (uuid) <span
-                                    class="text-danger">*</span></label><br/>
+                            <label for="youth-id" class="form-label">01.a) Youth ID (uuid) <span class="text-danger">*</span></label><br/>
                             <small class="fw-bold">Use the phone number if the UUID is not assigned.</small>
-                            <input type="text" class="form-control" id="youth-id"
-                                   placeholder="Use the phone number if UUID is not assigned" required>
+                            <input type="text" class="form-control" id="youth-id" placeholder="Use the phone number if UUID is not assigned" required>
+                            <div class="invalid-feedback" id="youth-id-error"><i class="fa-solid fa-circle-info"></i> Youth ID is required.</div>
                         </div>
                     </div>
 
                     <!-- Confirm UUID -->
                     <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label for="confirm-uuid" class="form-label">01.a.1) Please confirm UUID <span
-                                    class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="confirm-uuid" placeholder="Confirm UUID"
-                                   required>
+                            <label for="confirm-uuid" class="form-label">01.a.1) Please confirm UUID <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="confirm-uuid" placeholder="Confirm UUID" required>
+                            <div class="invalid-feedback" id="confirm-uuid-error"><i class="fa-solid fa-circle-info"></i> Please confirm UUID.</div>
                         </div>
                     </div>
 
                     <!-- Youth Name -->
                     <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label for="youth-name" class="form-label">01.b) Youth Name *</label>
-                            <input type="text" class="form-control" id="youth-name" placeholder="Enter youth name"
-                                   required>
+                            <label for="youth-name" class="form-label">01.b) Youth Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="youth-name" placeholder="Enter youth name" required>
+                            <div class="invalid-feedback" id="youth-name-error"><i class="fa-solid fa-circle-info"></i> Youth Name is required.</div>
                         </div>
                     </div>
 
                     <!-- Youth Gender -->
                     <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label class="form-label">01.c) Youth Gender *</label>
+                            <label class="form-label">01.c) Youth Gender <span class="text-danger">*</span></label>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="youth-gender" value="Male" required>
                                 <label class="form-check-label">Male</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="youth-gender" value="Female">
+                                <input class="form-check-input" type="radio" name="youth-gender" value="Female" required>
                                 <label class="form-check-label">Female</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="youth-gender" value="Other">
+                                <input class="form-check-input" type="radio" name="youth-gender" value="Other" required>
                                 <label class="form-check-label">Other...</label>
                             </div>
+                            <div class="invalid-feedback" id="youth-gender-error"><i class="fa-solid fa-circle-info"></i> Youth Gender is required.</div>
                         </div>
                     </div>
 
                     <!-- County -->
                     <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label class="form-label">01.d) County *</label>
+                            <label class="form-label">01.d) County <span class="text-danger">*</span></label>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="county" value="Homabay" required>
                                 <label class="form-check-label">Homabay</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="county" value="Kakamega">
+                                <input class="form-check-input" type="radio" name="county" value="Kakamega" required>
                                 <label class="form-check-label">Kakamega</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="county" value="Kitui">
+                                <input class="form-check-input" type="radio" name="county" value="Kitui" required>
                                 <label class="form-check-label">Kitui</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="county" value="Kwale">
+                                <input class="form-check-input" type="radio" name="county" value="Kwale" required>
                                 <label class="form-check-label">Kwale</label>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Call Status -->
-                    <div class="card p-3 mt-3">
-                        <div class="mb-3">
-                            <label class="form-label">02. Call Status *</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="Reached"
-                                       required>
-                                <label class="form-check-label">Reached</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="Call Back">
-                                <label class="form-check-label">Call Back</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="No answer">
-                                <label class="form-check-label">No answer</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="Phone Off">
-                                <label class="form-check-label">Phone Off</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="Hung Up">
-                                <label class="form-check-label">Hung Up</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="Wrong Number">
-                                <label class="form-check-label">Wrong Number</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-status" value="Not in Service">
-                                <label class="form-check-label">Not in Service</label>
-                            </div>
+                            <div class="invalid-feedback" id="county-error"><i class="fa-solid fa-circle-info"></i> County is required.</div>
                         </div>
                     </div>
 
@@ -158,55 +123,44 @@
                     </div>
                 </div>
 
+
                 <!-- Section 2 -->
                 <div class="form-section" id="section-2">
-                    <!-- Youth ID -->
-                    <div class="card p-3 mt-3">
-                        <div class="mb-3">
-                            <label for="purpose" class="form-label">Purpose of the Call <span
-                                    class="text-danger">*</span></label><br/>
-                            <textarea class="form-control" id="purpose" rows="4"></textarea>
-                        </div>
-                    </div>
-
                     <!-- Purpose of the Call -->
                     <div class="card p-3 mt-3">
                         <div class="mb-3">
-                            <label class="form-label">03. What is the purpose of this call? *</label>
+                            <label class="form-label">03. What is the purpose of this call? <span class="text-danger">*</span></label>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose"
-                                       value="A360 Awareness & Acquisition" required>
-                                <label class="form-check-label">A360 Awareness & Acquisition</label>
+                                <input class="form-check-input" type="radio" name="call-purpose" value="A360 Awareness & Acquisition" required>
+                                <label class="">A360 Awareness & Acquisition</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose"
-                                       value="Online Acquisition (BC7 DB)">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Online Acquisition (BC7 DB)" required>
                                 <label class="form-check-label">Online Acquisition (BC7 DB)</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose"
-                                       value="Bootcamp 6 DB Youths">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Bootcamp 6 DB Youths" required>
                                 <label class="form-check-label">Bootcamp 6 DB Youths</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose"
-                                       value="Offline Acquisition">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Offline Acquisition" required>
                                 <label class="form-check-label">Offline Acquisition</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="call-purpose"
-                                       value="Activation - Attendance Follow Up">
+                                <input class="form-check-input" type="radio" name="call-purpose" value="Activation - Attendance Follow Up" required>
                                 <label class="form-check-label">Activation - Attendance Follow Up</label>
                             </div>
+                            <div class="invalid-feedback" id="call-purpose-error"><i class="fa-solid fa-circle-info"></i> Please select the purpose of this call.</div>
                         </div>
                     </div>
 
-                    <!-- Section 1 -->
+                    <!-- Section 2 Footer -->
                     <div class="form-footer d-flex justify-content-between align-items-center mb-3">
                         <button type="button" class="btn btn-secondary" id="clearBtn-2">Clear Form</button>
                         <button type="button" class="btn btn-primary" id="submit">Submit</button>
                     </div>
                 </div>
+
 
                 <!-- Section 3 -->
                 <div class="form-section" id="section-3">
